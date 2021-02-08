@@ -1,0 +1,780 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Flavors&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header,.content,.principal,.footer{
+    margin-top: 10%;
+}
+
+.introducere{
+    margin: auto;
+    width: 90%;
+    height:90vh;
+    text-align: center;
+    background: linear-gradient(#BCED91 49%, transparent 49%),
+    linear-gradient(-45deg, white 33%, transparent 33%) 0 50%,
+    white linear-gradient(45deg, white 33%, #BCED91 33%) 0 50%;
+    background-repeat: repeat-x;
+    background-size: 1px 100%, 30px 30px, 30px 30px;
+    margin-bottom: -20vh;
+}
+.introducere .navbar{
+    width: 100%;
+    height: 10vh;
+    font-family: "Luckiest Guy", cursive;
+}
+
+.navbar .navbar-list{
+    margin:0;
+    padding: 15.5vh;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.navbar .navbar-list li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 1.8em;
+}
+
+.navbar .navbar-list a{
+    display: block;
+    font-size: 26px;
+    text-decoration: none;
+    color:#3b945e;
+}
+.header .content-box{
+    background:#f78888;
+    height: 90vh;
+    width: 90%;
+    margin:auto;
+    border-radius: 20px;
+
+}
+.content .content-box{
+    background:#f3d250;
+    height: 90vh;
+    width: 90%;
+    margin:auto;
+    border-radius: 20px;
+}
+.principal .content-box{
+    background:#5da2d5;
+    height: 90vh;
+    width: 90%;
+    margin:auto;
+    border-radius: 20px;
+}
+.footer .content-box {
+    background:#57ba98;
+    height: 90vh;
+    width: 90%;
+    margin:auto;
+    border-radius: 20px;
+}
+
+
+
+.title {
+    color: #234;
+    display: inline-block;
+    font-family: Pacifico, serif;
+    font-size: 2.2em;
+    padding: 0.8em;
+    /* everything above is for this page's style */
+
+    background: white;
+    background-clip: padding-box;
+    border: 4px dotted white;
+    position: relative;
+    z-index: 1;
+}
+
+.title:before,
+.title:after {
+    border: inherit;
+    border-width: 2px;
+    content: '';
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -6px;
+    position: absolute;
+    z-index: -1;
+}
+
+.title:after {
+    border-width: 1px;
+    border-radius: 4px;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+}
+
+/*font navbar --- */
+.title-font{
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    margin: 0;
+    font-size: 4em;
+    padding: 0.7em;
+    color: white;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+.rotate-title {
+    transform: scale(0.9);
+    display: inline-block;
+}
+.rotate-title:first-child:hover {
+    transition: 0.7s ease;
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+    alternate;
+}
+.rotate-title:last-child:hover {
+    transition: 0.7s ease;
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+    infinite alternate;
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    50%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bopB {
+    0% {
+        transform: scale(0.9);
+    }
+    80%,
+    100% {
+        transform: scale(1) rotateZ(-3deg);
+    }
+}
+
+.splash-content{
+    margin: auto;
+    width: 100%;
+    position: relative;
+    height: 50vh;
+    background: #f78888;
+    background-size: cover;
+    border-radius: 15px;
+}
+.splash-content:before{
+    content:'';
+    top:0;
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("splash.jpg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: screen;
+    border-radius: 15px;
+}
+
+.header .content-box .header-content{
+    margin:auto;
+    width: 93%;
+    height: 70%;
+
+}
+
+/*----------------------comic dialogue*/
+.comics-thought {
+    background-color: #fff;
+    margin: 1.5em 2em 2em 2em;
+    -webkit-filter: drop-shadow(0 4px 0 #f3655d);
+    filter: drop-shadow(0 4px 0 #f3655d);
+    -moz-transition: 2s;
+    -o-transition: 2s;
+    -webkit-transition: 2s;
+    transition: 2s;
+    font-size: 1.2em;
+    text-align: center;
+}
+.comics-thought::after {
+     content: "";
+     display: block;
+     position: absolute;
+     z-index: -1;
+ }
+.comics-thought:hover {
+     top: -30px;
+     -webkit-filter: drop-shadow(0 10px 0 #f3655d);
+     filter: drop-shadow(0 10px 0 #f3655d);
+ }
+.comics-thought p {
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+    padding:0 40px;
+}
+.comics-thought strong {
+    font-weight: 800;
+}
+
+.comics-thought h4 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.comics-thought strong {
+    text-shadow: -1px -1px #ffce55, 1px 1px #fa9939;
+}
+.comics-thought {
+    padding: 2em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+    -webkit-box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+    box-shadow: -60px -50px 0 -20px #fff, 60px -45px 0 -40px #fff;
+}
+.comics-thought::after {
+     width: 20%;
+     height: 55%;
+     right: -1.15em;
+     bottom: -.575em;
+     background: #fff;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     -moz-box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+     -webkit-box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+     box-shadow: -140px 0px 0 #fff, -50px 30px 0 -10px #fff, -60px 120px 0 -60px #fff, -90px 155px 0 -65px #fff, -120px 175px 0 -70px #fff;
+ }
+
+.sticky-note{
+    float:right;
+    bottom: 60%;
+    left:5%;
+}
+
+.content .first-row{
+    width: 100%;
+    height: 55%;
+    background: #f3d250;
+    margin: auto;
+}
+.content .second-row{
+    width: 100%;
+    height: 20%;
+    margin: auto;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    background: white;
+    margin: 5px;
+    transition: 1s;
+}
+
+.social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+}
+
+.social-btn:hover {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.social-btn:hover span {
+    padding: 2px;
+    width: max-content;
+}
+
+#twitter svg {
+    fill: #1da1f2;
+}
+
+#linkedin svg {
+    fill: #0e76a8;
+}
+
+#github {
+    fill: #333;
+}
+#facebook{
+    fill:#4691f6;
+}
+
+.first-row #map{
+
+    margin: auto;
+    height: 92%;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.first-row .demo{
+    font-family: 'Days One', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*-----makisu-------*/
+.first-row .demo a {
+
+    -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -ms-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+
+
+    text-decoration: none;
+}
+
+.first-row .demo .list {
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: -140px;
+    margin-top: -280px;
+    top: 69%;
+}
+
+.first-row .demo .list a {
+
+    display: block;
+    color: #fff;
+}
+
+.first-row .demo .list a:hover {
+    text-indent: 20px;
+}
+
+.first-row .demo .list dd {
+
+    text-indent: 10px;
+    line-height: 55px;
+    font-weight: 500;
+    margin: 0;
+    height: 55px;
+    width: 270px;
+    color: #fff;
+}
+.first-row .demo .list dt{
+
+    text-indent: 10px;
+    line-height: 55px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    height: 55px;
+    width: 270px;
+    color: #fff;
+}
+
+.first-row .demo .list dt {
+
+    /* Since we're hiding elements behind here, we need it in 3d */
+    -webkit-transform: translateZ(0.3px);
+    -moz-transform: translateZ(0.3px);
+    -ms-transform: translateZ(0.3px);
+    -o-transform: translateZ(0.3px);
+    transform: translateZ(0.3px);
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.first-row .demo .list dd {
+
+    border-top: 1px dashed rgba(255,255,255,0.3);
+    line-height: 35px;
+    font-size: 11px;
+    height: 35px;
+    margin: 0;
+}
+
+.first-row .demo .toggle {
+
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    border-radius: 3px;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 50px;
+    background: #2b2b2b;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    height: 50px;
+    bottom: -9%;
+    width: 140px;
+    color: #fff;
+    left: 17%;
+}
+
+.first-row .demo .toggle:hover {
+
+    background: #E42692;
+}
+.maki dt, .maki dd, .maki a { background: #FFC219; }
+.maki a:hover { background: #ffbb00; }
+.maki {
+
+    -webkit-transform: perspective(600px) translateZ(1px) !important;
+    -moz-transform: perspective(600px) translateZ(1px) !important;
+    -ms-transform: perspective(600px) translateZ(1px) !important;
+    -o-transform: perspective(600px) translateZ(1px) !important;
+    transform: perspective(600px) translateZ(1px) !important;
+
+}
+/*------calendar-------*/
+.main-calendar{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    width: 90%;
+    background-color: #f6e9dc;
+    height: 69%;
+    box-shadow:
+    0px 0px 0px 2px #e66053,
+    10px 10px 20px 10px;
+    display: flex;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calendar {
+    table-display: fixed;
+    border: 2.5px solid #e66053;
+    width: 90%;
+
+}
+
+.calendar__day__header,
+.calendar__day__cell {
+    border: 2.5px solid #e66053;
+    text-align: center;
+    width: 4%;
+    vertical-align: middle;
+}
+.calendar__day__cell:first-child {
+    border-left: none;
+}
+.calendar__day__cell:last-child {
+     border-right: none;
+ }
+
+.calendar__day__header,
+.calendar__day__cell {
+    padding: .75rem 0 1.5rem;
+}
+
+.calendar__banner--month {
+    border: 2.5px solid #e66053;
+    border-bottom: none;
+    text-align: center;
+    padding: .75rem;
+}
+.calendar__banner--month h1 {
+    background-color: black;
+    color: #f6e9dc;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: .5rem 2rem;
+    text-transform: uppercase;
+}
+
+.calendar__day__header {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.calendar__day__cell {
+    font-size: 2.5rem;
+    position: relative;
+}
+
+tr:nth-child(odd) > .calendar__day__cell:nth-child(odd) {
+    color: #e66053;
+}
+
+tr:nth-child(even) > .calendar__day__cell:nth-child(even) {
+    color: #e66053  ;
+}
+
+/*
+.calendar__day__cell[data-moon-phase] {
+    background-color: red;
+    color: black;
+&:after {
+     content: attr(data-moon-phase);
+     color: $cream;
+     display: block;
+     font-weight: 400;
+     font-size: .75rem;
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 1rem;
+     text-transform: uppercase;
+ }
+}
+
+.calendar__day__cell[data-bank-holiday] {
+    background-color: $black;
+    border-color: $black;
+
+    border-bottom: none;
+    color: $cream;
+&:after {
+     content: attr(data-bank-holiday);
+     color: $cream;
+     display: block;
+     font-size: .75rem;
+     font-weight: 400;
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 1rem;
+     text-transform: uppercase;
+ }
+}*/
+
+/*------ prices ---- */
+.prices-content{
+    height: 100%;
+    width: 100%;
+
+
+}
+.wrapper-prices-content{
+    width: 91%;
+    height: 71%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#prices {
+    max-width: 950px;
+    margin: auto;
+    width: 100%;
+    font-family: 'open sans';
+    font-weight: normal;
+
+}
+.pricing-table {
+    width: 95%;
+    margin: auto auto 20px auto;
+    position: relative;
+    min-height: 340px;
+    padding-bottom: 55px;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+
+/* border-radius: 6px;*/
+}
+.pricing-table td {
+    width: 33%;
+    vertical-align: top;
+/*border-radius:5px 5px 0 0;*/
+}
+.pricing-table h2 {
+    display: block;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 1.4em;
+    background: #009342;
+    font-weight: 800;
+    text-transform: uppercase;
+/* border-radius: 5px 5px 0 0;*/
+}
+#prices td:last-child h2 {
+    background: #018fff;
+}
+.pricing-table h3 {
+    display: block;
+    margin: 0;
+    padding: 0 0 10px;
+    background: #102e5c;
+    font-size: 0.9em;
+}
+
+#prices td:last-child h3 {
+    background: #018fff;
+}
+
+.pricing-table h4 {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+    background: #30b643;
+    font-size: 1.75em;
+    box-sizing: border-box;
+}
+
+#prices td:last-child h4 {
+    background: #39b5ff;
+}
+
+.pricing-table h5 {
+    display: block;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    padding: 10px;
+    background: #44d354;
+}
+
+#prices td:last-child h5 {
+    background: #65cafc;
+}
+
+.pricing-table h2,
+.pricing-table h3,
+.pricing-table h4,
+.pricing-table h5 {
+    color: #fff;
+}
+
+/* Popular Table */
+
+.popular .pricing-table {
+    margin-top: -10px;
+    min-height: 400px;
+}
+
+.popular .pricing-table h2 {
+    font-size: 1.8em;
+    background: #ff9138;
+}
+
+.popular .pricing-table h3 {
+    background: #ff9138;
+}
+
+.popular .pricing-table h4 {
+    background: #feb63d;
+}
+
+.popular .pricing-table h5 {
+    background: #f7cd6f;
+}
+
+.pricing-table p {
+    margin: 10px auto;
+    padding: 5px 0 5px;
+    width: 80%;
+    font-weight:300;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.pricing-table h5 + p {
+    border-top: 1px solid rgba(0,0,0,0);
+}
+
+.footer .pricing-table a {
+    display: block;
+    margin: auto;
+    width: 45%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    font-size: 0.85em;
+    color: #fff;
+    background: #2F333C;
+    text-decoration: none;
+    text-transform: uppercase;
+/* border-radius: 3px;*/
+    transition: all .3s ease-in-out;
+}
+
+.popular .pricing-table a {
+    background: #2F333C;
+}
+
+.pricing-table a:hover {
+    background: #505A6B;
+}
+
+/*------------------------------------*/
+/*---------- MEDIA QUERIES -----------*/
+/*------------------------------------*/
+
+@media screen and (max-width: 700px) {
+    #prices td {
+        display: block !important;
+        width: 100% !important;
+    }
+    .pricing-table {
+        min-height: 0;
+    }
+    .popular .pricing-table {
+        margin-top: 0px;
+    }
+}
+
+
+
+
+
